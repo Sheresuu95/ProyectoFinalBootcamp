@@ -12,7 +12,7 @@ const Section2: FC = () => {
     return (
         <div id="Pres-banner" className="container">
             <div className="section no-pad-bot">
-                <h2 className='header center blue-grey-text text-darken-2'>Bienvenido</h2>
+                <h2 className='header center blue-grey-text text-darken-2 letraShadow2'>Bienvenido</h2>
                 <div className="container row center">
                     <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="En EcoConnect, creemos en un mundo más verde y sostenible, y estamos comprometidos a hacerlo realidad. Somos una red social única que combina la pasión por el medio ambiente con la tecnología para crear un impacto positivo en el mundo." />
                     <h4 className='header center blue-grey-text text-darken-2'>Nuestra Misión</h4>

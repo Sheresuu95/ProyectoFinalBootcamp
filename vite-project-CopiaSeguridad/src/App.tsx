@@ -7,6 +7,7 @@ import KnowView from './views/Known/KnowView';
 import NavGenerico from './components/layout/NavGenerico';
 import LoginView from './views/Login/LoginView';
 import RegisterView from './views/Register/RegisterView';
+import PrivacityView from './views/Privacity/PrivacityView';
 
 function App() {
   //CONSTANTES, FUNCIONES, VARIABLES, ETC
@@ -23,6 +24,7 @@ function App() {
           <Route path="/know" element={<KnowView />} />
           <Route path="/login" element={<LoginView />} />
           <Route path="/register" element={<RegisterView/>} />
+          <Route path="/privacity" element={<PrivacityView/>} />
 
           {/* <Route path="/about" element={<About />} /> */}
         </Routes>

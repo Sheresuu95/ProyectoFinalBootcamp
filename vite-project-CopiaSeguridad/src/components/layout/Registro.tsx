@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import LogoEcoConnect from '../../assets/Logo_hojas_rosa6.png'
+import Foto from '../common/Foto';
 
 const Registro: FC = () => {
     useEffect(() => {
@@ -50,6 +51,7 @@ const Registro: FC = () => {
                                             <label htmlFor="email_inline">User1995</label>
                                             <span className="helper-text" data-error="wrong" data-success="right">Si no especifícas un usuario, se te asignará uno automáticamente</span>
                                         </div>
+                                        <Foto />
                                     </div>
                                 </div>
                             </form>
