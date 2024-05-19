@@ -20,7 +20,8 @@ import {
   MDBProgressBar,
   MDBIcon,
   MDBListGroup,
-  MDBListGroupItem
+  MDBListGroupItem,
+  MDBTextArea
 } from 'mdb-react-ui-kit';
 
 export interface Profile {
@@ -59,6 +60,11 @@ export interface Post {
   profile: Profile
   likes: Like[]
   publishedAt: string
+  post_type: string
+}
+
+interface RewardPost extends Post {
+  reward: Reward;
 }
 
 export interface Profile {
@@ -170,6 +176,7 @@ const ProfilePage: React.FC = () => {
               setWins(winsArray);
               setRewards(rewardsArray);
               setPosts(postsArray);
+              console.log(postsArray[0].post_type);
           } catch (error) {
               console.error('Error al obtener datos de la API:', error);
           }
@@ -381,9 +388,17 @@ const ProfilePage: React.FC = () => {
                 </MDBCard>
               </MDBCol>
               {posts.map((post) => (
-              <MDBCol md="6" key={post.id} style={{marginBottom: '10px'}}>
-              <MDBCard className="mb-4 shadow-sm h-100">
+              <MDBCol md="6" key={post.id} style={{marginTop : '10px'}}>
+              <MDBCard className="mb-4 shadow-sm h-100" style={post.post_type == 'rewards' ? { border: '2px solid gold' } : post.post_type == 'wins' ? { border: '2px solid turquoise'} : {}}>
                 <MDBCardBody className="d-flex flex-column">
+                {post.post_type == 'rewards' && (
+                    
+                    <span className="material-icons" style={{marginLeft: 'auto', marginTop: '-10px', color: 'gold'}}>emoji_events</span>
+  )}
+                  {post.post_type == 'wins' && (
+                    
+                    <span className="material-icons" style={{marginLeft: 'auto', marginTop: '-10px', color: 'turquoise'}}>military_tech</span>
+  )}
                   <MDBCardText className="mb-3" style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#2c3e50' }}>
                     {post.title}
                   </MDBCardText>
