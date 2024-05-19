@@ -8,6 +8,8 @@ import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
@@ -27,6 +29,16 @@ import jakarta.persistence.PrePersist;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "post_type", discriminatorType = DiscriminatorType.STRING)
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "post_type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Post.class, name = "Post"),
+        @JsonSubTypes.Type(value = RewardsPost.class, name = "rewards"),
+        @JsonSubTypes.Type(value = WinsPost.class, name = "wins")
+})
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
