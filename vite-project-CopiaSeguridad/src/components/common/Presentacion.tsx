@@ -1,58 +1,82 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import Linkdn from '../../assets/linkdn_logo_sin_fondo.png'
 import GitHub from '../../assets/github_sin_fondo.png'
+import fondoPanel from '../../assets/Fotos de Fondo/PinzadasBlancas2.jpg'
 
 interface PresentacionProps {
-    imagePath: string;
-    title: string;
-    description: string;
-    description2: string;
+  elementos: {
+    imagePersonal: string;
+    text: string;
+    title1: string;
+    title2: string;
     linkedInLink: string;
     githubLink: string;
+  }[];
 }
 
-const Presentacion: FC<PresentacionProps> = ({ imagePath, title, description, description2, linkedInLink, githubLink }) => {
-    const [expanded, setExpanded] = useState(false); // Estado para controlar si el desplegable está abierto o cerrado
+const Presentacion2: FC<PresentacionProps> = ({ elementos }) => {
+  return (
+    <>
+      {elementos.map((elemento, index) => (
+        <div key={index} className="col s10 offset-s1 m8 offset-m2 l10 offset-l1">
+          <div className="card-panel grey lighten-5 z-depth-1"  style={{backgroundImage: `url(${fondoPanel})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+            <div className="row valign-wrapper">
+              {index % 2 === 0 ? (
+                <>
+                  <div className="col s6 m6 l6">
+                    <img src={elemento.imagePersonal} alt="" className="circle responsive-img z-depth-3" style={{ width: '200px' }} />
+                    {/* notice the "circle" className */}
+                  </div>
+                  <div className="col s10">
+                    <h4 className="center blue-grey-text text-darken-1">
+                      {elemento.title1}
+                    </h4>
+                    <h5 className="center cyan-text text-darken-2">
+                      {elemento.title2}
+                    </h5>
+                    <div className="div-class blue-grey-text text-darken-2">
+                      {elemento.text}
+                    </div>
+                  </div>
+                  <div className="row center col s3 m3 l3">
+                        <a href={elemento.linkedInLink} className="brown-text"><img src={Linkdn} width="25px" alt="Logo Linkdn" /></a>
+                        <a href={elemento.githubLink} className="brown-text"><img src={GitHub} width="28px" alt="Logo Linkdn" /></a>
+                  </div>
+                </>
 
-    const toggleExpand = () => {
-        setExpanded(!expanded); // Cambiar el estado de expanded al contrario de su valor actual
-    };
+              ) : (
+                <>
+                  <div className="row center col s3 m3 l3">
+                        <a href={elemento.linkedInLink} className="brown-text"><img src={Linkdn} width="25px" alt="Logo Linkdn" /></a>
+                        <a href={elemento.githubLink} className="brown-text"><img src={GitHub} width="28px" alt="Logo Linkdn" /></a>
+                  </div>
+                  <div className="col s10">
+                    <h4 className="center blue-grey-text text-darken-1">
+                      {elemento.title1}
+                    </h4>
+                    <h5 className="center cyan-text text-darken-2">
+                      {elemento.title2}
+                    </h5>
+                    <div className="div-class blue-grey-text text-darken-2">
+                      {elemento.text}
+                    </div>
+                  </div>
+                  <div className="col s6 m6 l6">
+                    <img src={elemento.imagePersonal} alt="Image" className="circle responsive-img z-depth-3" style={{ width: '200px' }} />
+                    {/* notice the "circle" className */}
+                  </div>
+                  
+                </>
 
-    return (
-        <div className="col s10 offset-s1 m6 l6">
-            <div className="icon-block">
-                <h2 className="center brown-text">
-                    <img className="circle z-depth-1" width="145px" src={imagePath} alt={title} />
-                </h2>
-                <div className="icon-block">
-                <div className= "row"> 
-                    <div className="row center col s3 m3 l3">
-                        <a href={linkedInLink} className="brown-text"><img src={Linkdn} width="25px" alt="Logo Linkdn" /></a>
-                        <a href={githubLink} className="brown-text"><img src={GitHub} width="28px" alt="Logo Linkdn" /></a>
-                    </div>
-                    <div className="center-align">
-                        <h5 className="center blue-grey-text text-darken-1 letraShadow2">{title}</h5>
-                        <p className="center cyan-text text-darken-2">{description}</p>
-                    </div>
-                    <div className="row right btn-block">
-                        {/* Agrega un evento onClick para activar el desplegable */}
-                        <a className="btn-floating btn waves-effect waves-light cyan darken-2" onClick={toggleExpand}>
-                            <i className="material-icons">{expanded ? 'expand_less' : 'expand_more'}</i>
-                        </a>
-                    </div>
-                    
-                    {/* Oculta o muestra la descripción2 según el estado de expanded */}
-                    {expanded && (
-                        <div className="card-panel grey lighten-5">
-                            <p className="div-class blue-grey-text text-darken-2">{description2}</p>
-                        </div>
-                            
-                    )}
-                </div>
+              )}
+              
             </div>
+          </div>
+          <br></br>
         </div>
-        </div>
-    );
+      ))}
+    </>
+  );
 }
 
-export default Presentacion;
+export default Presentacion2;

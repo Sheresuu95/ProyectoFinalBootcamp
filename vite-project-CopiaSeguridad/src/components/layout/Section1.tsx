@@ -12,7 +12,7 @@ const Section1: FC = () => {
                 <div className="section no-pad-bot">
                     <div className="container">
                         <div className="header center">
-                            <h2 className="headercol s12 light white-text letraShadow">EcoConnect</h2>
+                            <h2 className="headercol s12 light white-text letraShadow"><span className='cyan-text'>Eco</span>nnect</h2>
                             <img src={LogoNaranja} alt="Logo" className="imagen-logo-AWSNT" />
                             <h4 className="row center col s12 light white-text letraShadow">Tu presente, Tu futuro, Tu red social</h4> 
                         </div>

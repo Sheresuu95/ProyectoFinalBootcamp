@@ -13,12 +13,12 @@ const Section2: FC = () => {
         <div id="Pres-banner" className="container">
             <div className="section no-pad-bot">
                 <h2 className='header center blue-grey-text text-darken-2 letraShadow2'>Bienvenido</h2>
-                <div className="container row center">
-                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="En EcoConnect, creemos en un mundo más verde y sostenible, y estamos comprometidos a hacerlo realidad. Somos una red social única que combina la pasión por el medio ambiente con la tecnología para crear un impacto positivo en el mundo." />
+                <div className="row center">
+                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="En Econnect, creemos en un mundo más verde y sostenible, y estamos comprometidos a hacerlo realidad. Somos una red social única que combina la pasión por el medio ambiente con la tecnología para crear un impacto positivo en el mundo." />
                     <h4 className='header center blue-grey-text text-darken-2'>Nuestra Misión</h4>
-                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="EcoConnect se fundó con un propósito claro: inspirar y empoderar a las personas de todo el mundo para que tomen medidas en pro del medio ambiente. Creemos en la fuerza del cambio colectivo y en el poder de las pequeñas acciones cotidianas." />
+                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="Econnect se fundó con un propósito claro: inspirar y empoderar a las personas de todo el mundo para que tomen medidas en pro del medio ambiente. Creemos en la fuerza del cambio colectivo y en el poder de las pequeñas acciones cotidianas." />
                     <h4 className='header center blue-grey-text text-darken-2'>¿Qué nos hace diferentes?</h4>
-                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="En EcoConnect, no solo te conectamos con personas que comparten tus valores ambientales, sino que también te ofrecemos una plataforma interactiva para participar en desafíos ecológicos y recibir recompensas éticas. Desde reducir el consumo de plástico hasta plantar árboles, cada acción cuenta y merece ser reconocida." />
+                    <PanelCard colorPanel="grey lighten-4" colorText="blue-grey-text text-darken-4" text="En Econnect, no solo te conectamos con personas que comparten tus valores ambientales, sino que también te ofrecemos una plataforma interactiva para participar en desafíos ecológicos y recibir recompensas éticas. Desde reducir el consumo de plástico hasta plantar árboles, cada acción cuenta y merece ser reconocida." />
                     <h4 className='header center blue-grey-text text-darken-2'>¿Cómo funciona?</h4>
                 </div>
                 <div className="row">

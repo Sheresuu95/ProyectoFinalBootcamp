@@ -28,7 +28,7 @@ const Footer: FC = () => {
                 <div className="footer-copyright">
                     <div className="container rgba(51,51,51,0.08)">
                         © 2024 Copyright
-                        <a className="grey-text text-lighten-4 right" href="#!">EcoConnect</a>
+                        <a className="grey-text text-lighten-4 right" href="#!"><span className='blue-grey-text text-darken-3'>Eco</span>nnect</a>
                     </div>
                 </div>
             </footer>
