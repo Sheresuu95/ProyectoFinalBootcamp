@@ -8,6 +8,7 @@ import NavGenerico from './components/layout/NavGenerico';
 import LoginView from './views/Login/LoginView';
 import RegisterView from './views/Register/RegisterView';
 import PrivacityView from './views/Privacity/PrivacityView';
+import CondicionsView from './views/Condicions/CondicionsView';
 
 function App() {
   //CONSTANTES, FUNCIONES, VARIABLES, ETC
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" element={<LoginView />} />
           <Route path="/register" element={<RegisterView/>} />
           <Route path="/privacity" element={<PrivacityView/>} />
+          <Route path="/condicions" element={<CondicionsView/>} />
 
           {/* <Route path="/about" element={<About />} /> */}
         </Routes>

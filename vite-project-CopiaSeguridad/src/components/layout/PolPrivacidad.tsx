@@ -50,7 +50,7 @@ const PolPrivacidad: FC = () => {
                 <div className="col s10 offset-s1 m8 offset-m2 l10 offset-l1 ">
                     <h3 className="header center blue-grey-text text-darken-2 letraShadow2">Política de Privacidad de <span className='cyan-text text-darken-2'>Eco</span>nnect</h3>
                     {/* Contenido de la política de privacidad */}
-                    <p className="blue-grey-text text-lighten-1 div-class">Última actualización: 17 de mayo de 4044</p>
+                    <p className="blue-grey-text text-lighten-1 div-class">Última actualización: 17 de mayo de 2024</p>
                     <p className="blue-grey-text text-darken-4 div-class">
                         Bienvenido a Econnect, la red social del futuro comprometida con la conciencia medioambiental.
                         En Econnect, nos comprometemos a proteger y respetar tu privacidad.

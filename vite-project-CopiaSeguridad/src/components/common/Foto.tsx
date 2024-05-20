@@ -4,15 +4,14 @@ const Foto: FC = () => {
   return (
     <form action="#">
     <div className="file-field inline">
-      <div className="btn">
+      <div className="btn cyan darken-2">
         <span>¡Sube tu imagen!</span>
         <input type="file" />
       </div>
       
       <div className="file-path-wrapper">
-        <input className="file-path validate" type="text" />
+        <input className="file-path validate" type="text" placeholder="Si no eliges una imagen, se te asignará una por defecto"/>
       </div>
-      <span className="helper-text" data-error="wrong" data-success="right">Si no eliges una imagen, se te asignará una por defecto</span>
     </div>
   </form>
   )

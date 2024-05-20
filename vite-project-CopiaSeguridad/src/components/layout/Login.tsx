@@ -5,6 +5,7 @@ import AppleLogo from '../../assets/Logo_Apple.png';
 import FacebookLogo from '../../assets/Logo_Face.png';
 import fondo from '../../assets/Fotos de Fondo/Nueves.jpg';
 
+
 const Login: FC = () => {
     const [usernameOrEmail, setUsernameOrEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -62,13 +63,13 @@ const Login: FC = () => {
                 <div className="col s10 offset-s1 m5 offset-m1 l5 offset-l1">
                     <div>
                         <img src={Logo} alt="Logo ASNET" width="150px" className="image-class-opacity" />
-                        <h4 className="cyan-text text-darken-2 letraShadow2">EcoConnect</h4>
-                        <p className="div-class grey-text text-darken-2">EcoConect te conecta con aquellos que son parte de tu vida, al tiempo que promueve la conciencia global y el bienestar del planeta con desafíos ecológicos emocionantes.</p>
+                        <h4 className="blue-grey-text text-darken-2 letraShadow2"><span className="cyan-text text-darken-2 letraShadow2">Eco</span>nnect</h4>
+                        <p className="div-class grey-text text-darken-2">Econnect te conecta con aquellos que son parte de tu vida, al tiempo que promueve la conciencia global y el bienestar del planeta con desafíos ecológicos emocionantes.</p>
                     </div>
                 </div>
                 <div className="col s10 offset-s1 m5 offset-m1 l4 offset-l1">
                     <br />
-                    <div className="card-panel" style={{opacity: '0.82'}}>
+                    <div className="card-panel" style={{ opacity: '0.82' }}>
                         <h5 className='cyan-text text-darken-2 letraShadow2'>Iniciar sesión</h5>
                         <form onSubmit={handleSubmit} method='POST' id='login'>
                             <div className="input-field">
@@ -116,15 +117,13 @@ const Login: FC = () => {
                             </div>
                         </form>
 
-                        <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-                        <a href="#modal1" className="cyan-text text-darken-3">¿Has perdido la contraseña?</a>
+                        <a href="/register" className="cyan-text text-darken-3">¿Has perdido la contraseña?</a>
                         <div className="input-field">
                             <p className="grey-text text-darken-2">¿Eres nuevo?</p>
                         </div>
 
                         <div className="input-field">
-                            <a href="/register" className="waves-effect waves-light btn modal-trigger blue-grey lighten-2">
+                            <a href="/register" className="waves-effect waves-light btn blue-grey lighten-2">
                                 Regístrate aquí
                             </a>
                             {/* Aquí deberías tener un componente de registro */}
