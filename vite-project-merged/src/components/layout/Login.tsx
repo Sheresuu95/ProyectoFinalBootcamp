@@ -17,7 +17,6 @@ const Login: FC = () => {
         e.preventDefault();
 
         if (!usernameOrEmail || !password) {
-            //alertMessage = 'Por favor, completa todos los campos.';
             M.toast({ html: 'Por favor, completa todos los campos.', classes: 'rounded deep-orange lighten-1' });
             return;
         }
@@ -30,23 +29,18 @@ const Login: FC = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ usernameOrEmail, password }
-                )
+                body: JSON.stringify({ usernameOrEmail, password })
             });
 
             if (response.status === 200) {
                 const data = await response.json();
-                localStorage.setItem('token', data.token);
-                console.log(data);
-                window.location.href = `/profile/1`;
- 
+                localStorage.setItem('userId', data.userId); // Almacena la ID de usuario en el almacenamiento local
+                window.location.href = `/profile/${data.userId}`;
             } else {
-                //alertMessage = 'Credenciales inválidas.'
                 M.toast({ html: 'Credenciales inválidas.', classes: 'rounded deep-orange lighten-1' });
             }
         } catch (error) {
             console.error('Error en la solicitud:', error);
-            //alertMessage = 'Ocurrió un error al intentar iniciar sesión.'
             M.toast({ html: 'Ocurrió un error al intentar iniciar sesión.', classes: 'rounded deep-orange lighten-1' });
         } finally {
             setLoading(false);

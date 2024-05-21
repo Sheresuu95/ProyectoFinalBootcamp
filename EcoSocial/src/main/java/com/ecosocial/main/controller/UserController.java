@@ -271,20 +271,12 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
-        // Generar y devolver un token JWT si la autenticación es exitosa
-        String token = generateJWTToken(user);
-        Map<String, String> response = new HashMap<>();
-        response.put("token", token);
+        // Devolver la ID de usuario si la autenticación es exitosa
+        Map<String, Long> response = new HashMap<>();
+        response.put("userId", (long) user.getId());
         return ResponseEntity.ok(response);
     }
 
-    private String generateJWTToken(User user) {
-        Algorithm algorithm = Algorithm.HMAC256("your-secret");
-        return JWT.create()
-                .withSubject(String.valueOf(user.getId()))
-                .withClaim("username", user.getUsername())
-                .sign(algorithm);
-    }
     
     @PutMapping("{id}/password")
     public String changePassword(@PathVariable int id, @RequestBody Map<String, String> userData) {
