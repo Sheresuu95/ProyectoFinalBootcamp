@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LogoAWSNT from '../../assets/circulo-logo_con hoja_blanco_Red.png';
 import PostForm from "../common/Post";
 
@@ -32,16 +32,15 @@ const NavLogin: FC<NavProps> = ({ onSearch }) => {
     <>
       <nav>
         <div className="nav-wrapper colorbase">
-          <Link to="/" className="brand-logo">
-            <img src={LogoAWSNT} alt="Logo" className="logo-AWSNT-cabecera" style={{ height: '100px', width: '100px' }} />
-          </Link>
+          <a href="/" className="brand-logo">
+            <img src={LogoAWSNT} alt="Logo" className="responsive-img logo-AWSNT-cabecera" />
+          </a>
           <ul className="right hide-on-med-and-down">
-            <li><Link to="/">Presentación</Link></li>
-            <li><Link to="/feed/:id">Inicio</Link></li>
-            <li><Link to="/profile/:id">Perfil</Link></li>
-            <li><Link to="/rewards/:username">Logros</Link></li>
-            <li><Link to="/wins/:username">Retos</Link></li>
-            <li><Link to="/ranking">Ranking</Link></li>
+            <li><a href="/feed/:id">Inicio</a></li>
+            <li><a href="/profile/:id">Perfil</a></li>
+            <li><a href="/rewards/:username">Logros</a></li>
+            <li><a href="/wins/:username">Retos</a></li>
+            <li><a href="/ranking">Ranking</a></li>
             {/* Dropdown Trigger */}
             <li>
               <a href="#!" onClick={togglePostForm}>Crear Post</a>
@@ -64,12 +63,11 @@ const NavLogin: FC<NavProps> = ({ onSearch }) => {
           </ul>
           {/* Responsive para mobile */}
           <ul id="nav-mobile" className="sidenav">
-            <li><Link to="/">Presentación</Link></li>
-            <li><Link to="/feed/:id">Inicio</Link></li>
-            <li><Link to="/profile/:id">Perfil</Link></li>
-            <li><Link to="/rewards/:username">Logros</Link></li>
-            <li><Link to="/wins/:username">Retos</Link></li>
-            <li><Link to="/ranking">Ranking</Link></li>
+            <li><a href="/feed/:id">Inicio</a></li>
+            <li><a href="/profile/:id">Perfil</a></li>
+            <li><a href="/rewards/:username">Logros</a></li>
+            <li><a href="/wins/:username">Retos</a></li>
+            <li><a href="/ranking">Ranking</a></li>
             {/* Dropdown Trigger */}
             <li>
               <a href="#!" onClick={togglePostForm}>Crear Post</a>
