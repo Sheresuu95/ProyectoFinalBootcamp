@@ -1,13 +1,16 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import Login from '../../components/layout/Login';
+import { UserProvider } from '../../components/common/UserContext';
 
 
 const LoginView: FC = () => {
   return (
-    <body>
-      <Login />
-    </body>
-  )
-}
+    <div id="root">
+      <UserProvider>
+        <Login />
+      </UserProvider>
+    </div>
+  );
+};
 
 export default LoginView;

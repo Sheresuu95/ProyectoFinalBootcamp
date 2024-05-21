@@ -4,6 +4,7 @@ import GoogleLogo from '../../assets/Logo_Google.png';
 import AppleLogo from '../../assets/Logo_Apple.png';
 import FacebookLogo from '../../assets/Logo_Face.png';
 import fondo from '../../assets/Fotos de Fondo/Nueves.jpg';
+import { useUser } from '../common/UserContext'; // Importa useUser desde UserContext
 
 
 
@@ -12,6 +13,7 @@ const Login: FC = () => {
     const [usernameOrEmail, setUsernameOrEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
+    const { setUserId } = useUser(); // Obtiene setUserId desde el contexto de usuario
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -34,6 +36,8 @@ const Login: FC = () => {
 
             if (response.status === 200) {
                 const data = await response.json();
+                // Establece la ID de usuario utilizando setUserId del contexto de usuario
+                setUserId(data.userId);
                 localStorage.setItem('userId', data.userId); // Almacena la ID de usuario en el almacenamiento local
                 window.location.href = `/profile/${data.userId}`;
             } else {
