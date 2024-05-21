@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Feed from '../../components/layout/Feed.tsx'
+import { UserProvider } from '../../components/common/UserContext.tsx';
 
 const FeedView: FC = () => {
   const posts: any = [
@@ -7,9 +8,11 @@ const FeedView: FC = () => {
   ];
 
   return (
-    <body>
-        <Feed posts={posts} />
-    </body>
+    <div id="root">
+    <UserProvider>
+      <Feed posts={posts} />
+    </UserProvider>
+  </div>
   )
 }
 

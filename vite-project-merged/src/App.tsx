@@ -17,6 +17,7 @@ import Wins from './views/Wins/Wins';
 import { QueryClient, QueryClientProvider } from "react-query";
 import ProfileResultPage from './views/search/ProfileResultPage';
 import Ranking from './views/Ranking/Ranking';
+import FeedView from "./views/Feed/FeedView";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,8 @@ function App() {
           <Route path="/register" element={<RegisterView/>} />
           <Route path="/privacity" element={<PrivacityView/>} />
           <Route path="/condicions" element={<CondicionsView/>} />
+          {/*Que se vean solo si estás logueado*/}
+          <Route path="/feed/:id" element={<FeedView/>}/>
           <Route path="/profile/:id" element={<Profile/>}/>
           <Route path="/rewards/:username" element={<Rewards />} />
           <Route path="/wins/:username" element={<Wins />} />

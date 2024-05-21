@@ -1,10 +1,14 @@
 import CardRanking from "../../components/common/CardRanking"
+import { UserProvider } from "../../components/common/UserContext"
 
 function Ranking() {
   return (
-    <>
-        <CardRanking />
-    </>
+    <UserProvider>
+      <div id="root">
+      <CardRanking />
+      </div>
+    </UserProvider>
+        
   )
 }
 
