@@ -1,0 +1,65 @@
+
+/*import '../../App.css', ponerlo en los componentes*/ 
+/* Archivo.css */
+
+/*Modificación del color base de la App/WEB*/
+.colorbase {
+  background-color: #00acc1 !important; /* Cyan */
+}
+
+/*Características del Logo*/
+.logo-AWSNT-cabecera {
+  /*Redimensionar Logo*/
+  width: 57px;
+  height: 57px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+/*Características imagen del Logo*/
+.imagen-logo-AWSNT {
+  /*Redimensionar Logo*/
+  width: 250px;
+  height:250px;
+}
+
+.imagen-iconos-personales{
+  width: 100px;
+  height: 100px;
+}
+
+/*Sombre letra clara*/
+.letraShadow {
+
+  text-shadow: 3px 3px 2.25px #263238;
+}
+
+/*Sombre letra oscura*/
+.letraShadow2 {
+  text-shadow: 3px 3px 2.25px #cbcecf;
+}
+
+.div-class {
+  text-align: justify;
+}
+.image-class-opacity {
+  /* Ajusta el valor según la intensidad de la tonalidad que desees */
+  filter: opacity(0.90);
+  /* filter: contrast(120%);  */
+  filter: saturate(0.45);
+}
+
+
+.image-class-opacity2 {
+  /* Ajusta el valor según la intensidad de la tonalidad que desees */
+  filter: opacity(0.30);
+  /* filter: contrast(120%);  */
+  filter: saturate(0.65);
+}
+
+/*Imagen de fondo*/
+.fondoLogin {
+  background-image: url('./assets/Fotos\ de\ Fondo/Gotas\ de\ agua.jpg');
+  background-size: contain;
+}
+

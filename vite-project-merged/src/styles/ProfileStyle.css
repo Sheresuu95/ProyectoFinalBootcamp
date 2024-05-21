@@ -1,0 +1,100 @@
+/* customStyles.css */
+.profile-section {
+    background-color: black;
+    background-size: cover;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .profile-avatar {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card{
+    height: 350px;
+  }
+
+  .card .rw{
+    width: 210px !important;
+  }
+  
+  .card-title {
+    text-align: left;
+  }
+  
+  .card.center-align .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 120px;
+    position: absolute;
+    bottom: 1%;
+  }
+  
+  
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .post-card, .win-reward-card {
+    flex: 0 0 calc(50% - 10px); /* Dos tarjetas por fila, con espacio */
+    min-height: 300px; /* Fija una altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card-content-fixed {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-content.post{
+    height: 130px;
+  }
+  
+  .card-image {
+    max-height: 110px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .card-content-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .relleno{
+    height: 150px;
+  }
+
+  .btn.npm{
+    position: absolute;
+    bottom: 4%;
+    left: 38%;
+  }
+
+  #python{
+    margin-top: 30px;
+  }
+  
+  #placa{
+    margin: 20 auto;
+  }
